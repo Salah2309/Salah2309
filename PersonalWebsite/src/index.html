@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="customeHeader">SAL ‎ | ‎  Hello!</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <script>
+    const headerTexts = [
+      "Developer", "Engineer", "Scientist", "Resercher", "Innovator", "Mentor", "Expert", "Visionary", "Scholar"
+    ];
+    let headerIndex = 0;
+    function changeHeaderText() {
+      var title = document.getElementById("customeHeader");
+      if (document.visibilityState === 'visible') {
+        title.textContent = "SAL ‎ | ‎  " + headerTexts[headerIndex];
+        headerIndex = (headerIndex + 1) % headerTexts.length;
+      } else {
+        title.textContent = "Come back :(";
+      }
+    }
+    setInterval(changeHeaderText, 1000);
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
